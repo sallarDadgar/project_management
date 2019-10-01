@@ -1,6 +1,16 @@
-<p id="notice"><%= notice %></p>
+<% @projects.each do |project| %>
+  <div class="index_row clearfix">
+    <h2 class="todo_list_title"><%= link_to project.title, project %></h2>
+    <p class="todo_list_sub_title"><%= project.description %></p>
+  </div>
+<% end %>
 
-<h1>Projects</h1>
+<div class="links">
+  <%= link_to "New Project", new_project_path %>
+</div>
+
+
+<!-- <h1>Listing Projects</h1>
 
 <table>
   <thead>
@@ -27,3 +37,4 @@
 <br>
 
 <%= link_to 'New Project', new_project_path %>
+ -->
